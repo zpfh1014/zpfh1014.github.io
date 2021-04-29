@@ -1,0 +1,61 @@
+{% assign sum = site.posts | size %}
+<nav class="nav__list">
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>
+  <ul class="nav__items" id="category_tag_menu">
+      <!--전체 글 수-->
+      <li>
+            📂 <span style="font-family:'Cafe24Oneprettynight';">전체 글 수</style> <span style="font-family:'Coming Soon';">{{sum}}</style> <span style="font-family:'Cafe24Oneprettynight';">개</style>
+      </li>
+      <li>
+        <span class="nav__sub-title">Blog</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Blog" %}
+                        <li><a href="/categories/blog" class="">Blog ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        <span class="nav__sub-title">HTML</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "HTML" %}
+                        <li><a href="/categories/html" class="">HTML ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        <span class="nav__sub-title">Javascript</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Javascript" %}
+                        <li><a href="/categories/javascript" class="">Javascript ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        <span class="nav__sub-title">React</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "React" %}
+                        <li><a href="/categories/react" class="">React ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        <span class="nav__sub-title">Coding Test</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Programmers" %}
+                        <li><a href="/categories/programmers" class="">Programmers ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        <span class="nav__sub-title">API</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "KakaoMap" %}
+                        <li><a href="/categories//kakaomap" class="">카카오맵 ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+      </li>
+  </ul>
+</nav>
