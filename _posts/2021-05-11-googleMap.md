@@ -36,8 +36,8 @@ Google Maps Platform - 지도 스타일 영역에서 사용하고자 하는 지�
 
 ```javascript
 <script src="https://maps.googleapis.com/maps/api/js?&key=발급받은 KEY값&sensor=false&region=KR"></script>
-<script src="/ko/resource/js/map_data.js"></script>
-<script src="/ko/resource/js/plugin/markerclusterer.min.js"></script>
+<script src="/js/map_data.js"></script>
+<script src="/js/plugin/markerclusterer.min.js"></script>
 
 // html push
 function setNameCardInfo(){
