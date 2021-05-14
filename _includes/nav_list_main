@@ -11,7 +11,7 @@
         <span class="nav__sub-title">Javascript</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Javascript" %}
+                    {% if category[0] == "javascript" %}
                         <li><a href="/categories/javascript" class="">Javascript ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
@@ -19,7 +19,7 @@
         <span class="nav__sub-title">React</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "React" %}
+                    {% if category[0] == "react" %}
                         <li><a href="/categories/react" class="">React ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
