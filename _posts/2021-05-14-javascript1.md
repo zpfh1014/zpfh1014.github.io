@@ -35,4 +35,28 @@ var arr = new Array();
 모든 생성자 함수에는 기본적으로 prototype이란 속성이 자동으로 생기는데,
 콘솔창에 <code>Object.prototype</code> 이라고 타이핑하면 아래와 같이 확인 할 수 있다.
 
-![images 1](/assets/images/javascript1_img_01.gif)
+![images 1](/assets/images/javascript/img_01.gif)
+
+Object.prototype의 값으로 리턴된 객체에는 다시 constructor라는 속성이 들어있다.
+
+![images 2](/assets/images/javascript/img_02.gif)
+
+constructor와 prototype은 한 쌍을 이루며 서로가 서로의 정보를 가지고 있다.
+
+### 2. 생성자 함수의 인스턴스 (Instance)
+
+```javascript
+var obj = new Object();
+```
+
+모든 생성자 함수는 this라는 빈 객체를 리턴한다.     
+obj 변수에는 빈 객체가 할당된다. 이 때 생성자 함수에서 리턴하는 결과물을 우리는 <strong>인스턴스(instance)</strong>라고 한다.    
+인스턴스는 constructor와 prototype 사이에서 생성된 자식과도 같은 존재이다.
+
+### 3. 프로토타입 체인 (Prototype Chain)
+
+```javascript
+var obj = new Object();
+
+console.log(obj.constuctor);
+```
